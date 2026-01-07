@@ -13,6 +13,6 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         return User.objects.create_user(
             email = validated_data['email'],
             password = validated_data['password'],
-            role = validated_data['role','USER'],
+            role = validated_data.get('role','USER')
             
         )
