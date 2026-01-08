@@ -35,7 +35,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
 
     role = models.CharField(
-        max_length=10, choices=ROLE_CHOICES, default='USER')
+        max_length=5, choices=ROLE_CHOICES, default='USER')
     created_at = models.DateTimeField(auto_now_add=True)
 
     USERNAME_FIELD = 'email'
